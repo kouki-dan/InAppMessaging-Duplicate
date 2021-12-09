@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import FirebaseInAppMessaging
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
+        Button("Trigger In-App") {
+            InAppMessaging.inAppMessaging().triggerEvent("first_event")
+            InAppMessaging.inAppMessaging().triggerEvent("second_event")
+        }
             .padding()
     }
 }

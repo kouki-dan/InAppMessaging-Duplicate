@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		EDF3F83327623D2800B8D23D /* InAppMessaging_DuplicateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF3F82327623D2700B8D23D /* InAppMessaging_DuplicateApp.swift */; };
-		EDF3F83427623D2800B8D23D /* InAppMessaging_DuplicateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF3F82327623D2700B8D23D /* InAppMessaging_DuplicateApp.swift */; };
 		EDF3F83527623D2800B8D23D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF3F82427623D2700B8D23D /* ContentView.swift */; };
-		EDF3F83627623D2800B8D23D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF3F82427623D2700B8D23D /* ContentView.swift */; };
 		EDF3F83727623D2800B8D23D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDF3F82527623D2800B8D23D /* Assets.xcassets */; };
-		EDF3F83827623D2800B8D23D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDF3F82527623D2800B8D23D /* Assets.xcassets */; };
+		EDF3F84327623E6D00B8D23D /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = EDF3F84227623E6D00B8D23D /* FirebaseInAppMessaging-Beta */; };
+		EDF3F84527623F4A00B8D23D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDF3F84427623F4A00B8D23D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,8 +19,7 @@
 		EDF3F82427623D2700B8D23D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EDF3F82527623D2800B8D23D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDF3F82A27623D2800B8D23D /* InAppMessaging-Duplicate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InAppMessaging-Duplicate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDF3F83027623D2800B8D23D /* InAppMessaging-Duplicate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InAppMessaging-Duplicate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDF3F83227623D2800B8D23D /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		EDF3F84427623F4A00B8D23D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,13 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EDF3F82D27623D2800B8D23D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				EDF3F84327623E6D00B8D23D /* FirebaseInAppMessaging-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,7 +38,6 @@
 			isa = PBXGroup;
 			children = (
 				EDF3F82227623D2700B8D23D /* Shared */,
-				EDF3F83127623D2800B8D23D /* macOS */,
 				EDF3F82B27623D2800B8D23D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				EDF3F82327623D2700B8D23D /* InAppMessaging_DuplicateApp.swift */,
+				EDF3F84427623F4A00B8D23D /* GoogleService-Info.plist */,
 				EDF3F82427623D2700B8D23D /* ContentView.swift */,
 				EDF3F82527623D2800B8D23D /* Assets.xcassets */,
 			);
@@ -65,17 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				EDF3F82A27623D2800B8D23D /* InAppMessaging-Duplicate.app */,
-				EDF3F83027623D2800B8D23D /* InAppMessaging-Duplicate.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		EDF3F83127623D2800B8D23D /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				EDF3F83227623D2800B8D23D /* macOS.entitlements */,
-			);
-			path = macOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,25 +77,11 @@
 			dependencies = (
 			);
 			name = "InAppMessaging-Duplicate (iOS)";
+			packageProductDependencies = (
+				EDF3F84227623E6D00B8D23D /* FirebaseInAppMessaging-Beta */,
+			);
 			productName = "InAppMessaging-Duplicate (iOS)";
 			productReference = EDF3F82A27623D2800B8D23D /* InAppMessaging-Duplicate.app */;
-			productType = "com.apple.product-type.application";
-		};
-		EDF3F82F27623D2800B8D23D /* InAppMessaging-Duplicate (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EDF3F83E27623D2800B8D23D /* Build configuration list for PBXNativeTarget "InAppMessaging-Duplicate (macOS)" */;
-			buildPhases = (
-				EDF3F82C27623D2800B8D23D /* Sources */,
-				EDF3F82D27623D2800B8D23D /* Frameworks */,
-				EDF3F82E27623D2800B8D23D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "InAppMessaging-Duplicate (macOS)";
-			productName = "InAppMessaging-Duplicate (macOS)";
-			productReference = EDF3F83027623D2800B8D23D /* InAppMessaging-Duplicate.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -128,9 +97,6 @@
 					EDF3F82927623D2800B8D23D = {
 						CreatedOnToolsVersion = 13.1;
 					};
-					EDF3F82F27623D2800B8D23D = {
-						CreatedOnToolsVersion = 13.1;
-					};
 				};
 			};
 			buildConfigurationList = EDF3F82127623D2700B8D23D /* Build configuration list for PBXProject "InAppMessaging-Duplicate" */;
@@ -142,12 +108,14 @@
 				Base,
 			);
 			mainGroup = EDF3F81D27623D2700B8D23D;
+			packageReferences = (
+				EDF3F84127623E6D00B8D23D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = EDF3F82B27623D2800B8D23D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				EDF3F82927623D2800B8D23D /* InAppMessaging-Duplicate (iOS) */,
-				EDF3F82F27623D2800B8D23D /* InAppMessaging-Duplicate (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -158,14 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDF3F83727623D2800B8D23D /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EDF3F82E27623D2800B8D23D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EDF3F83827623D2800B8D23D /* Assets.xcassets in Resources */,
+				EDF3F84527623F4A00B8D23D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,15 +139,6 @@
 			files = (
 				EDF3F83527623D2800B8D23D /* ContentView.swift in Sources */,
 				EDF3F83327623D2800B8D23D /* InAppMessaging_DuplicateApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EDF3F82C27623D2800B8D23D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EDF3F83627623D2800B8D23D /* ContentView.swift in Sources */,
-				EDF3F83427623D2800B8D23D /* InAppMessaging_DuplicateApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,58 +315,6 @@
 			};
 			name = Release;
 		};
-		EDF3F83F27623D2800B8D23D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.koukilab.InAppMessaging-Duplicate";
-				PRODUCT_NAME = "InAppMessaging-Duplicate";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		EDF3F84027623D2800B8D23D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.koukilab.InAppMessaging-Duplicate";
-				PRODUCT_NAME = "InAppMessaging-Duplicate";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -436,16 +336,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDF3F83E27623D2800B8D23D /* Build configuration list for PBXNativeTarget "InAppMessaging-Duplicate (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EDF3F83F27623D2800B8D23D /* Debug */,
-				EDF3F84027623D2800B8D23D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EDF3F84127623E6D00B8D23D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EDF3F84227623E6D00B8D23D /* FirebaseInAppMessaging-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDF3F84127623E6D00B8D23D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessaging-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EDF3F81E27623D2700B8D23D /* Project object */;
 }
